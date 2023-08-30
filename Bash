@@ -1,1 +1,31 @@
+  GNU nano 6.2                                 automation.sh *                                         
+#!/bin/bash
+
+##########
+
+# Bash Script for Weekly Server Update
+#Author : Saraswati Gurung
+#Date: August 30, 2023
+
+#Making sure of the home directory
+
+cd ~
+
+#Updating the server 
+
+sudo apt update
+
+#Number of upgradable package
+
+upgradable_packages=$(sudo apt list --upgradable)| grep -c 'upgradeable'
+
+#Creating a new file name
+
+current_date=$(date +"%m.%d.%y")
+
+New_File="update$current_date.txt"
+
+# Create the file with package info
+echo "$upgradable_packages packages can be upgraded." > "$New_file"
+
 
