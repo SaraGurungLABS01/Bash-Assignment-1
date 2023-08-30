@@ -25,6 +25,11 @@ current_date=$(date +"%m.%d.%y")
 
 New_File="update$current_date.txt"
 
+Once we finish creating the script we have to amke it executable using:
+"chmod +x update_script.sh"
+
+
+
 # Create the file with package info
 echo "$upgradable_packages packages can be upgraded." > "$New_file"
 
