@@ -34,3 +34,10 @@ Once we finish creating the script we have to amke it executable using:
 echo "$upgradable_packages packages can be upgraded." > "$New_file"
 
 
+Cron Job- to enable us to schedule this script for every friday at 11 pm -: crontab -e
+
+This will open your crontab file in the default text editor. 
+
+Inorder to schedule the script to run every Friday at 11 PM. Type the following command:
+0 23 * * 5 /home/ubuntu/automation.sh
+
